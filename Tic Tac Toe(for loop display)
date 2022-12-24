@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+int display (int);
+
+int main ()
+{
+	int input ,b;
+	
+	
+	for (b=0; b<10; b++){
+	display (input);
+	cout << "Enter a number \n";
+	cin >>input;
+	
+	system ("clear");
+	}
+	
+	return 0;
+}
+
+int display (int input)
+{	
+	int n=1;
+	
+	for (int row=0; row<3; row++){
+		
+		for (int num=1; num <4; num++){
+			//for for first 2 columns
+			if (num < 3){
+				 
+				 if (input == n){
+				cout << "  " << "*" << "  |";
+				 } 
+				 else {
+				 	cout << "  " << n << "  |";
+				 }
+			}
+			//code for far right column
+			else {
+				if (input == n){
+					cout << "  " << "*" << "  " <<endl;
+				}
+				else {
+				cout <<"  " << n << "  " <<endl;
+			}
+			
+				cout << "-----------------\n";
+				}
+				n=n+1;
+		}
+	}
+	
+	
+	
+	/*cout << n[0]<<"  |   2  |  3  " <<endl;
+	cout << "-------------------" <<endl;
+	cout << "  4  |   5  |  6  " <<endl;
+	cout << "-------------------" <<endl;
+	cout << "  7  |   8  |  9  " <<endl;  */
+}
